@@ -1,7 +1,7 @@
 {
     "name": "faustbrian/seomafia-php-client",
     "description": "A SeoMafia.net Client for PHP",
-    "keywords": ["api", "faustbrian", "faustbrian-seomafia", "seomafia", "Brian Faust", "faustbrian"],
+    "keywords": ["api", "seomafia", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
