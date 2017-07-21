@@ -16,6 +16,21 @@ use BrianFaust\Http\Http;
 class Client
 {
     /**
+     * @var string
+     */
+    public $apiKey;
+
+    /**
+     * Create a new client instance.
+     *
+     * @param string $apiKey
+     */
+    public function __construct(string $apiKey)
+    {
+        $this->apiKey = $apiKey;
+    }
+    
+    /**
      * Create a new API service instance.
      *
      * @param string $name
@@ -24,7 +39,7 @@ class Client
      */
     public function api(string $name): API\AbstractAPI
     {
-        $client = Http::withBaseUri('http://seomafia.net/');
+        $client = Http::withBaseUri("http://seomafia.net/?apiKey={$this->apiKey}");
 
         $class = "BrianFaust\\SeoMafia\\API\\{$name}";
 
