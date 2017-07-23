@@ -29,7 +29,7 @@ class Client
     {
         $this->apiKey = $apiKey;
     }
-    
+
     /**
      * Create a new API service instance.
      *
