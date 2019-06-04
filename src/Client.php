@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of SeoMafia.net PHP Client.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\SeoMafia;
+namespace Plients\SeoMafia;
 
-use BrianFaust\Http\Http;
+use Plients\Http\Http;
 
 class Client
 {
@@ -37,13 +37,13 @@ class Client
      *
      * @param string $name
      *
-     * @return \BrianFaust\SeoMafia\API\AbstractAPI
+     * @return \Plients\SeoMafia\API\AbstractAPI
      */
     public function api(string $name): API\AbstractAPI
     {
         $client = Http::withBaseUri("http://seomafia.net/?apiKey={$this->apiKey}");
 
-        $class = "BrianFaust\\SeoMafia\\API\\{$name}";
+        $class = "Plients\\SeoMafia\\API\\{$name}";
 
         return new $class($client);
     }
